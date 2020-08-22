@@ -1,10 +1,10 @@
 # xlsx2docx-byColumns
 
-This project hosts the python3 tool `xlsx2docx-byColumns.py` and after build a derived MS-Windows executable `xlsx2docx-byColumns.exe`
+This project hosts the python3 tool `xlsx2docx-byColumns.py` and (after build) a MS-Windows executable `xlsx2docx-byColumns.exe`
 
 ## Workflow
 
-The Python3 script `xlsx2docx-byColumns.py` generates out of an xlsx database (MS-Excel file) the resulting docx files (MS-Word).
+The Python3 script `xlsx2docx-byColumns.py` generates from an xlsx database (MS-Excel file) the resulting docx files (MS-Word).
 An TOML formatted configuration file `xlsx2docx-byColumns_Configuration.toml` provides information to control the input and output data, e.g. file path, used rows and columns.
 The script uses the `xlsx2docx-byColumns_Template.docx` to define styles and to replace or add paragraphs controlled by configurable columns in the MS-Excel database `xlsx2docx-byColumns_SourceData_Example.xlsx`.
 
@@ -56,18 +56,27 @@ This build folder will be generated and contains several results.
 This project is developed under MS-Windows using VSCode and was tested partly with WSL.
 
 Install dependencies for Python3 (on the cmd.exe or powershell.exe):
+
     py -3 -m pip install -r requirements.txt
 
 Run the script on MS-Windows via a small wrapper (to support the projects folder structure) on the cmd.exe or powershell.exe:
+
     .\xlsx2docx-byColumns_run_script.bat
 
 Install the dependency to build the additional standalone executable:
+
     py -3 -m pip install pyinstaller
 
 Build the additional standalone executable:
+
     pyinstaller src/xlsx2docx-byColumns.py --onefile --distpath ./build/dist --specpath ./build
 
+Alternatively to build the additional standalone executable run the small wrapper on the cmd.exe or powershell.exe:
+
+    .\xlsx2docx-byColumns_build_exe.bat
+
 Run the executable on MS-Windows via a small wrapper (to support the projects folder structure) on the cmd.exe or powershell.exe:
+
     .\xlsx2docx-byColumns_run_exe.bat
 
 ## Additional information sources

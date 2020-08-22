@@ -399,10 +399,10 @@ def main():
     if len(sys.argv) > 1:
         if sys.argv[1] == "--version":
             print(f"{__file__} V{__version__}")
-            exit()
+            sys.exit()
         elif sys.argv[1] == "--help":
             printUsage()
-            exit()
+            sys.exit()
         else:
             print(f"Use of alternative configuration file '{sys.argv[1]}'")
             configurationFilename = sys.argv[1]
