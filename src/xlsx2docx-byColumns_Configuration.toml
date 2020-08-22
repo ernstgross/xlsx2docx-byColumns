@@ -1,0 +1,30 @@
+bla = 1
+# This is the configuration for xlsx2docx-byColumns.py
+
+[sourceData]
+filename         = 'test/xlsx2docx-byColumns_SourceData_Example.xlsx'
+contentSheetname = "Content"
+contentStartRow  = 2
+commandColumn    = 1
+styleColumn      = 2
+replaceColumn    = 3
+
+# "contentColumns" must correspont to the "generatedData.filenames". 
+# That means identical number of elements and same sequence.
+contentColumns = [
+  4, 
+  5, 
+  6
+]
+
+[template]
+filename = "test/xlsx2docx-byColumns_Template_Example.docx"
+
+[generatedData]
+# "filenames" must correspont to the "sourceData.contentColumns". 
+# That means identical number of elements and same sequence.
+filenames = [
+  "build/generatedDataFile1.docx",
+  "build/generatedDataFile2.docx",
+  "build/generatedDataFile3.docx",
+]

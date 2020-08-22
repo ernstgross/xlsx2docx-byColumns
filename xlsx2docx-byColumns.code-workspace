@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"docx",
+			"esw",
+			"funktionsbeschreibung",
+			"funktionsbeschreibungen",
+			"hr",
+			"openpyxl",
+			"p",
+			"rd",
+			"strftime",
+			"xlsx"
+		]
+	}
+}
